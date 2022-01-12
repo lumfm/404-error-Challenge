@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@700&family=Montserrat:wght@700&family=Space+Mono:wght@400;700&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0%;
+}
+
+body {
+  font-family: 'Space Mono', monospace;
+}
+
+body ul {
+  list-style-type: none;
+}
+
+body a {
+  text-decoration: none;
+}
+
+.container {
+  width: 90%;
+  max-width: 1000px;
+  min-height: 400px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -ms-grid-rows: (auto)[3];
+      grid-template-rows: repeat(3, auto);
+      grid-template-areas: "header     header" "main-img   main-section" "footer     footer";
+  margin: auto;
+  gap: 20px;
+}
+
+.header {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: header;
+}
+
+.header__txt {
+  font-family: 'Inconsolata', monospace;
+  font-weight: 700;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 1.5rem;
+}
+
+.main-img {
+  min-width: 50%;
+  min-height: 400px;
+  background-image: url("../img/Scarecrow.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  padding: 20px 10px;
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: main-img;
+}
+
+.main-section {
+  min-height: 400px;
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: main-section;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 10px;
+}
+
+.main-section__title {
+  font-weight: 700;
+  font-size: 3.1rem;
+}
+
+.main-section__txt {
+  font-weight: 400;
+  font-size: 1.5rem;
+}
+
+.main-section__btn {
+  background: #333333;
+  color: white;
+  font-weight: 700;
+  font-size: 0.87rem;
+  padding: 23px 43px;
+}
+
+.footer {
+  min-height: 200px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: #BDBDBD;
+  text-align: center;
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: footer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  padding: 30px 0px;
+}
+
+@media (max-width: 768px) {
+  .container {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: (auto)[4];
+        grid-template-rows: repeat(4, auto);
+        grid-template-areas: "header" "main-img" "main-section" "footer";
+    margin: auto;
+    gap: 20px;
+  }
+}
+/*# sourceMappingURL=styles.css.map */
